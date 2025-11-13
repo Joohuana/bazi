@@ -2,11 +2,14 @@
 
 #footer-element-container {
   text-align: left;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
 }
 
 #element-display {
   display: flex;
-  gap: 4px;
+  gap: 1px;
   justify-content: left;
   margin-bottom: 15px;
 }
@@ -18,7 +21,7 @@
 }
 
 #solar-term {
-  font-size: 0.6em;
+  font-size: 0.9em;
   color: #333;
   font-weight: 500;
 }
