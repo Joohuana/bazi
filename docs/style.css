@@ -3,7 +3,7 @@
 .season {
   text-align: left;
   display: flex;
-     align-items: center;
+     align-items: flex-start;
   gap: 10px;
 }
 
@@ -23,6 +23,7 @@ gap: 1px;
 
 .season-name{
   font-size: 0.9em;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
+    font-family: inherit;
 }
