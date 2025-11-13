@@ -14,7 +14,10 @@
     "solarTerm": "Rain Water",
     "date": "2025-02-19",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "土",
+      "木"
+    ]
   },
   {
     "name": "Spring 3",
@@ -31,7 +34,10 @@
     "solarTerm": "Spring Equinox",
     "date": "2025-03-20",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "土",
+      "木"
+    ]
   },
   {
     "name": "Spring 5",
@@ -48,7 +54,10 @@
     "solarTerm": "Grain Rain",
     "date": "2025-04-20",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "金",
+      "土"
+    ]
   },
   {
     "name": "Summer 1",
@@ -65,7 +74,10 @@
     "solarTerm": "Grain Buds",
     "date": "2025-05-21",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "金",
+      "火"
+    ]
   },
   {
     "name": "Summer 3",
@@ -82,7 +94,10 @@
     "solarTerm": "Summer Solstice",
     "date": "2025-06-21",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "水",
+      "火"
+    ]
   },
   {
     "name": "Summer 5",
@@ -99,7 +114,10 @@
     "solarTerm": "Major Heat",
     "date": "2025-07-23",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "水",
+      "土"
+    ]
   },
   {
     "name": "Autumn 1",
@@ -116,7 +134,10 @@
     "solarTerm": "End of Heat",
     "date": "2025-08-23",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "木",
+      "金"
+    ]
   },
   {
     "name": "Autumn 3",
@@ -133,7 +154,10 @@
     "solarTerm": "Autumn Equinox",
     "date": "2025-09-23",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "木",
+      "金"
+    ]
   },
   {
     "name": "Autumn 5",
@@ -150,7 +174,10 @@
     "solarTerm": "Frost’s Descent",
     "date": "2025-10-23",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "火",
+      "土"
+    ]
   },
   {
     "name": "Winter 1",
@@ -167,7 +194,10 @@
     "solarTerm": "Minor Snow",
     "date": "2025-11-22",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "火",
+      "水"
+    ]
   },
   {
     "name": "Winter 3",
@@ -184,7 +214,10 @@
     "solarTerm": "Winter Solstice",
     "date": "2025-12-21",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "土",
+      "水"
+    ]
   },
   {
     "name": "Winter 5",
@@ -201,6 +234,9 @@
     "solarTerm": "Major Cold",
     "date": "2026-01-20",
     "ganzhi": "",
-    "elements": []
+    "elements": [
+      "土",
+      "土"
+    ]
   }
 ]
