@@ -3,7 +3,7 @@
 #footer-element-container {
   text-align: left;
   display: flex;
-  flex-direction: column-reverse;
+ 
   gap: 10px;
 }
 
@@ -11,6 +11,7 @@
   display: flex;
   gap: 1px;
   justify-content: left;
+   flex-direction: column-reverse;
   margin-bottom: 15px;
 }
 
