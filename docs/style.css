@@ -3,7 +3,7 @@
 .season {
   text-align: left;
   display: flex;
- 
+     align-items: center;
   gap: 10px;
 }
 
@@ -12,7 +12,9 @@
 .element-circles {
     display: flex;
     flex-direction: column;
+gap: 1px;
   }
+
 .element-circle {
   width: 12px;
   height: 12px;
