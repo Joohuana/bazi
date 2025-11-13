@@ -3,9 +3,9 @@
 .season {
   text-align: left;
   display: flex;
-     align-items: flex-start;
+     align-items: center;
   gap: 10px;
-    margin-top: -10px;
+    margin-top: -5px;
 }
 
 
