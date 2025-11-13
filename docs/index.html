@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GanZhi Day</title>
+<title>GanZhi Seasons</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,17 +25,30 @@ const ELEMENT_COLORS = {
 
 fetch('./data.json')
   .then(res => res.json())
-  .then(data => {
-    document.getElementById('solar-term').textContent = data.solarTerm;
-    
-    const container = document.getElementById('element-display');
+  .then(seasons => {
+    const container = document.getElementById('seasons-container');
     container.innerHTML = '';
-    
-    data.elements.forEach(el => {
-      const circle = document.createElement('div');
-      circle.className = 'element-circle';
-      circle.style.backgroundColor = ELEMENT_COLORS[el] || 'gray';
-      container.appendChild(circle);
+
+    seasons.forEach(s => {
+      const seasonDiv = document.createElement('div');
+      seasonDiv.className = 'season';
+
+      const nameSpan = document.createElement('span');
+      nameSpan.className = 'season-name';
+      nameSpan.textContent = s.name + ' (' + s.solarTerm + ')';
+      seasonDiv.appendChild(nameSpan);
+
+      const circlesDiv = document.createElement('div');
+      circlesDiv.className = 'element-circles';
+      s.elements.forEach(el => {
+        const circle = document.createElement('div');
+        circle.className = 'element-circle';
+        circle.style.backgroundColor = ELEMENT_COLORS[el] || 'gray';
+        circlesDiv.appendChild(circle);
+      });
+
+      seasonDiv.appendChild(circlesDiv);
+      container.appendChild(seasonDiv);
     });
   })
   .catch(err => console.error(err));
