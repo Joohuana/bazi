@@ -5,6 +5,7 @@
   display: flex;
      align-items: flex-start;
   gap: 10px;
+    margin-top: -10px;
 }
 
 
@@ -21,7 +22,7 @@ gap: 1px;
   border-radius: 50%;
 }
 
-.season-name{
+.season-name {
   font-size: 0.9em;
   color: #ffffff;
   font-weight: 500;
