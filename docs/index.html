@@ -23,7 +23,12 @@ const ELEMENT_COLORS = {
 fetch('./data.json')
   .then(res => res.json())
   .then(seasons => {
-    const today = new Date();
+const today = new Date();
+const options = { timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit' };
+const berlinDateStr = new Intl.DateTimeFormat('sv', options).format(today);
+const [year, month, day] = berlinDateStr.split('-');
+const berlinToday = new Date(`${year}-${month}-${day}`);
+
     let previousElements = ['gray','gray'];
     let currentSeason = seasons[0];
 

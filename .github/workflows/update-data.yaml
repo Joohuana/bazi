@@ -2,8 +2,9 @@ name: Update GanZhi Data
 
 on:
   schedule:
-    # Run daily at 00:00 UTC
-    - cron: '0 0 * * *'
+    # Run daily at 00:00 Germany time
+    - cron: '23 23 * * *' # UTC (MEZ+1) → 00:00 MEZ
+
   workflow_dispatch: # Allow manual trigger
   push:
     branches:
