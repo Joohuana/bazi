@@ -12,8 +12,8 @@
     <div class="element-circle"></div>
     <div class="element-circle"></div>
   </div>
-<div id="seasons-container">Loading…</span>
-</div>
+<div id="seasons-container">Loading…</div>
+
 <script>
 const ELEMENT_COLORS = {
   '木': 'green',
@@ -23,7 +23,7 @@ const ELEMENT_COLORS = {
   '水': 'blue'
 };
 
-fetch('./seasons.json')
+fetch('./data.json')
   .then(res => res.json())
   .then(seasons => {
     const container = document.getElementById('seasons-container');

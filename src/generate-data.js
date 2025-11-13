@@ -33,7 +33,7 @@ const SEASONS_2025 = [
 const fs = require('fs');
 const path = require('path');
 
-const outputPath = path.join(__dirname, '../docs/seasons.json');
+const outputPath = path.join(__dirname, '../docs/data.json');
 fs.writeFileSync(outputPath, JSON.stringify(SEASONS_2025, null, 2));
 
 console.log('24 seasons data generated successfully!');
