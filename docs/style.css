@@ -1,27 +1,25 @@
 
 
-#footer-element-container {
+.season {
   text-align: left;
   display: flex;
  
   gap: 10px;
 }
 
-#element-display {
-  display: flex;
-  gap: 1px;
-  justify-content: left;
-   flex-direction: column-reverse;
-  margin-bottom: 15px;
-}
 
+
+.element-circles {
+    display: flex;
+    flex-direction: column;
+  }
 .element-circle {
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
 
-#solar-term {
+.season-name{
   font-size: 0.9em;
   color: #333;
   font-weight: 500;

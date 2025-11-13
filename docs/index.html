@@ -12,7 +12,7 @@
     <div class="element-circle"></div>
     <div class="element-circle"></div>
   </div>
-  <span id="solar-term">Loading…</span>
+<div id="seasons-container">Loading…</span>
 </div>
 <script>
 const ELEMENT_COLORS = {
@@ -23,7 +23,7 @@ const ELEMENT_COLORS = {
   '水': 'blue'
 };
 
-fetch('./data.json')
+fetch('./seasons.json')
   .then(res => res.json())
   .then(seasons => {
     const container = document.getElementById('seasons-container');
