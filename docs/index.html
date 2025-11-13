@@ -26,30 +26,38 @@ const ELEMENT_COLORS = {
 fetch('./data.json')
   .then(res => res.json())
   .then(seasons => {
+    const today = new Date();
+    // Find the latest season whose date is <= today
+    let currentSeason = seasons[0];
+    for (const s of seasons) {
+      const seasonDate = new Date(s.date);
+      if (today >= seasonDate) currentSeason = s;
+      else break;
+    }
+
+    // Update display
     const container = document.getElementById('seasons-container');
     container.innerHTML = '';
 
-    seasons.forEach(s => {
-      const seasonDiv = document.createElement('div');
-      seasonDiv.className = 'season';
+    const seasonDiv = document.createElement('div');
+    seasonDiv.className = 'season';
 
-      const nameSpan = document.createElement('span');
-      nameSpan.className = 'season-name';
-      nameSpan.textContent = s.name + ' (' + s.solarTerm + ')';
-      seasonDiv.appendChild(nameSpan);
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'season-name';
+    nameSpan.textContent = currentSeason.name + ' (' + currentSeason.solarTerm + ')';
+    seasonDiv.appendChild(nameSpan);
 
-      const circlesDiv = document.createElement('div');
-      circlesDiv.className = 'element-circles';
-      s.elements.forEach(el => {
-        const circle = document.createElement('div');
-        circle.className = 'element-circle';
-        circle.style.backgroundColor = ELEMENT_COLORS[el] || 'gray';
-        circlesDiv.appendChild(circle);
-      });
-
-      seasonDiv.appendChild(circlesDiv);
-      container.appendChild(seasonDiv);
+    const circlesDiv = document.createElement('div');
+    circlesDiv.className = 'element-circles';
+    currentSeason.elements.forEach(el => {
+      const circle = document.createElement('div');
+      circle.className = 'element-circle';
+      circle.style.backgroundColor = ELEMENT_COLORS[el] || 'gray';
+      circlesDiv.appendChild(circle);
     });
+
+    seasonDiv.appendChild(circlesDiv);
+    container.appendChild(seasonDiv);
   })
   .catch(err => console.error(err));
 </script>
