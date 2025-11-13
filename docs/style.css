@@ -1,0 +1,24 @@
+
+
+#footer-element-container {
+  text-align: left;
+}
+
+#element-display {
+  display: flex;
+  gap: 4px;
+  justify-content: left;
+  margin-bottom: 15px;
+}
+
+.element-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+#solar-term {
+  font-size: 0.6em;
+  color: #333;
+  font-weight: 500;
+}

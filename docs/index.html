@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GanZhi Day</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="footer-element-container">
+  <div id="element-display">
+    <div class="element-circle"></div>
+    <div class="element-circle"></div>
+  </div>
+  <span id="solar-term">Loading…</span>
+</div>
+<script>
+const ELEMENT_COLORS = {
+  '木': 'green',
+  '火': 'red',
+  '土': 'yellow',
+  '金': 'silver',
+  '水': 'blue'
+};
+
+fetch('./data.json')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('solar-term').textContent = data.solarTerm;
+    
+    const container = document.getElementById('element-display');
+    container.innerHTML = '';
+    
+    data.elements.forEach(el => {
+      const circle = document.createElement('div');
+      circle.className = 'element-circle';
+      circle.style.backgroundColor = ELEMENT_COLORS[el] || 'gray';
+      container.appendChild(circle);
+    });
+  })
+  .catch(err => console.error(err));
+</script>
+</body>
+</html>
