@@ -27,4 +27,6 @@ gap: 1px;
   color: rgba(246, 246, 246, 0.94);
   font-weight: 600;
   font-family: "Diatype Variable", sans-serif;
+    mix-blend-mode: exclusion;
+
 }
