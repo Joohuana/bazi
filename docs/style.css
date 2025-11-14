@@ -28,5 +28,7 @@ gap: 1px;
   font-weight: 600;
   font-family: "Diatype Variable", sans-serif;
     mix-blend-mode: exclusion;
-
+font-variation-settings: 'slnt' 0, 'MONO' 0;
+line-height: 1.2;
+letter-spacing: 0em;
 }
