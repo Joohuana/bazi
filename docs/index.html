@@ -48,29 +48,32 @@ const berlinToday = new Date(`${year}-${month}-${day}`);
     const container = document.getElementById('seasons-container');
     container.innerHTML = '';
 
-    const seasonDiv = document.createElement('div');
-    seasonDiv.className = 'season';
+  const seasonDiv = document.createElement('div');
+seasonDiv.className = 'season';
 
-    // Show only season name like "Spring 1"
-    const nameSpan = document.createElement('span');
-    nameSpan.className = 'season-name';
-    nameSpan.textContent = currentSeason.name;
-    seasonDiv.appendChild(nameSpan);
+const circlesDiv = document.createElement('div');
+circlesDiv.className = 'element-circles';
 
-    const circlesDiv = document.createElement('div');
-    circlesDiv.className = 'element-circles';
+// Always two circles, use previousElements if empty
+for (let i = 0; i < 2; i++) {
+  const el = previousElements[i] || previousElements[0] || 'gray';
+  const circle = document.createElement('div');
+  circle.className = 'element-circle';
+  circle.style.backgroundColor = ELEMENT_COLORS[el] || 'gray';
+  circlesDiv.appendChild(circle);
+}
 
-    // Always two circles, use previousElements if empty
-    for (let i=0; i<2; i++) {
-      const el = previousElements[i] || previousElements[0] || 'gray';
-      const circle = document.createElement('div');
-      circle.className = 'element-circle';
-      circle.style.backgroundColor = ELEMENT_COLORS[el] || 'gray';
-      circlesDiv.appendChild(circle);
-    }
+// Append circles first
+seasonDiv.appendChild(circlesDiv);
 
-    seasonDiv.appendChild(circlesDiv);
-    container.appendChild(seasonDiv);
+// Then append the season name
+const nameSpan = document.createElement('span');
+nameSpan.className = 'season-name';
+nameSpan.textContent = currentSeason.name;
+seasonDiv.appendChild(nameSpan);
+
+container.appendChild(seasonDiv);
+
   })
   .catch(err => console.error(err));
 </script>
